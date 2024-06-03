@@ -18,7 +18,7 @@ for (const game of games as Game[]) {
 
   for (const table of game.tables) {
     console.log(`Table ID: ${table.id}`);
-    app.get(`/${game}/${table}/highscores`, async(c) => {
+    app.get(`/${game.id}/${table.id}/highscores`, async(c) => {
       // You can access the request body with c.req.body
       // For example: const { score } = c.req.body;
 
