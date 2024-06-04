@@ -8,13 +8,15 @@ export async function executeSQLQuery(query : string, params : any) {
     const client = await pool.connect();
     try {
         const res = await client.query(query, params);
+        console.log(res);
         return res.rows;
     } catch (error) {
         // Log the error along with the query and parameters for debugging
         console.error('Error executing query:', query);
         console.error('With parameters:', params);
         console.error('Error message:', error);
-        throw error; // Re-throw the error to be handled by the caller
+        return `Error Executing Query: ${query}, With Parameters: [${params}], ERROR: ${error}`;
+        //throw error; // Re-throw the error to be handled by the caller
     } finally {
         client.release();
     }
