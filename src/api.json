@@ -1,0 +1,67 @@
+[
+  {
+    "id": "nephilim_ressurection",
+    "tables": [
+      {
+        "id": "endless_hs",
+        "endpoints": [
+          {
+            "endpoint": "setscore",
+            "sqlQuery": "UPDATE endless_hs SET score = $1 WHERE id = $2",
+            "parameters": { "score": "integer", "id": "string" }
+          },
+          {
+            "endpoint": "getscore",
+            "sqlQuery": "SELECT * FROM endless_hs WHERE id = $1",
+            "parameters": { "id": "string" }
+          }
+        ]
+      },
+      {
+        "id": "cave_hs",
+        "endpoints": [
+          {
+            "endpoint": "setscore",
+            "sqlQuery": "UPDATE cave_hs SET score = $1 WHERE id = $2",
+            "parameters": { "score": "integer", "id": "string" }
+          },
+          {
+            "endpoint": "getscore",
+            "sqlQuery": "SELECT * FROM cave_hs WHERE id = $1",
+            "parameters": { "id": "string" }
+          }
+        ]
+      },
+      {
+        "id": "temple_hs",
+        "endpoints": [
+          {
+            "endpoint": "setscore",
+            "sqlQuery": "UPDATE temple_hs SET score = $1 WHERE id = $2",
+            "parameters": { "score": "integer", "id": "string" }
+          },
+          {
+            "endpoint": "getscore",
+            "sqlQuery": "SELECT * FROM temple_hs WHERE id = $1",
+            "parameters": { "id": "string" }
+          }
+        ]
+      },
+      {
+        "id": "village_hs",
+        "endpoints": [
+          {
+            "endpoint": "setscore",
+            "sqlQuery": "UPDATE village_hs SET score = $1 WHERE id = $2",
+            "parameters": { "score": "integer", "id": "string" }
+          },
+          {
+            "endpoint": "getscore",
+            "sqlQuery": "SELECT * FROM village_hs WHERE id = $1",
+            "parameters": { "id": "string" }
+          }
+        ]
+      }
+    ]
+  }
+]
